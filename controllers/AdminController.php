@@ -29,7 +29,6 @@ class AdminController extends BaseController
 
 
     public function actionLogin() {
-        session_start();
         $users = Users::Instance();
         if($users->getUser() != null){
             header('Location: /admin/index');
